@@ -1,0 +1,40 @@
+:root{
+    --size:3;
+    --cell-size:23vmin;
+}
+body{
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    display: flex;
+    justify-content: center;
+    font-family: 'itim',cursive;
+}
+#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-rows:repeat(var(--size), var(--cell-size));
+    grid-template-columns:repeat(var(--size), var(--cell-size));
+    gap: 1em;
+    user-select: none;
+}
+.cell{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--cell-size);
+    cursor: pointer;
+}
+.results{
+    color: white;
+    font-size: 8vmin;
+    user-select: none;
+}
+.X{
+    color: #d161ff;
+}
+.O{
+    color: #8052ec; 
+}
